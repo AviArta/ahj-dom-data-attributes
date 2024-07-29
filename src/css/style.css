@@ -1,0 +1,29 @@
+:root {
+  --cell-size: 16vh;
+}
+
+body {
+  background-color: rgb(231, 204, 222);
+}
+
+.table {
+	width: 100%;
+	margin-bottom: 20px;
+	border: 1px solid darkmagenta;
+	border-collapse: collapse; 
+}
+.table th {
+	font-weight: bold;
+	padding: 5px;
+	background: #efefef;
+	border: 1px solid darkmagenta;
+}
+
+th.x2193:after {
+  content: '\2193';
+}
+
+.table td {
+	border: 1px solid darkmagenta;
+	padding: 5px;
+}
