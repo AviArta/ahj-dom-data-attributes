@@ -1,4 +1,4 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/gi594o6g6a6p3h7h?svg=true)](https://ci.appveyor.com/project/AviArta/ahj-dom)
+[![Build status](https://ci.appveyor.com/api/projects/status/qavlfaaw982a58us?svg=true)](https://ci.appveyor.com/project/AviArta/ahj-dom-data-attributes)
 
 ### Loading and Sorting, data-attributes (задача со звёздочкой)
 
