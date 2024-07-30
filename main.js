@@ -208,29 +208,35 @@ function sortStrings(dataType) {
 /* eslint-disable no-unused-vars */
 
 
+
 const table = new sortTable(document.querySelector(".board-container"));
 document.addEventListener("DOMContentLoaded", () => {
   const newTable = table.createTable(data);
+  // Проверка работы каждой функции отдельно:
   //sortedNumbers("id");
   //sortedNumbers("year");
   //sortedNumbers("imdb");
-  sortedStrings("title");
+  //sortedStrings("title");
 
-  /*for (let funcIndex = 0; funcIndex < listFunction.length; funcIndex += 1) {
-    setInterval(() => {
-      listFunction[funcIndex];
-      console.log(funcIndex)}, 2000);
-    }*/
-
-  /*setTimeout(() => {
-    const listFunction = [sortedNumbers('id'), 
-      sortedNumbers('year'), 
-      sortedNumbers('imdb'), 
-      sortedStrings('title')];
-    for (let funcIndex = 0; funcIndex < listFunction.length; funcIndex += 1) {
-      listFunction[funcIndex];
-    }
-    }, 2000)*/
+  function callFunction(listFunctions, timesCall, timeBetween) {
+    let i = 0;
+    let k = 0;
+    listFunctions.forEach(function (func) {
+      for (k = 0; k < timesCall; k += 1) {
+        i += 1;
+        setTimeout(func, i * timeBetween);
+      }
+    });
+  }
+  callFunction([function () {
+    sortedNumbers("id");
+  }, function () {
+    sortedNumbers("year");
+  }, function () {
+    sortedNumbers("imdb");
+  }, function () {
+    sortedStrings("title");
+  }], 1, 2000);
 });
 ;// CONCATENATED MODULE: ./src/index.js
 
